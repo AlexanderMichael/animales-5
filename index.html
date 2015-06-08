@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html><head>
+<meta charset="utf-8">
+<title>Animales Salvajes y Domesticos</title>
+<link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="phonegap.js"></script>
+<script src="jquery-mobile/acciones.js"></script>
+
+<style>
+
+.fondo {
+	background-image:url(Animales/fondo.jpg);
+	width:100%;
+	height:80.5%
+}
+
+.men {
+	margin: 50px;
+	padding: 50px;
+}
+.imagenes
+{
+	height:27%;
+	width: 26%;
+	float: left;
+	margin-top:1.733333%;
+	margin-left:9.2%;
+	margin-right:9.2%;
+	margin-bottom:1.733333%;
+	border: 10px double #FFF;
+}
+
+.letra {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #300;
+}
+</style>
+
+</head>
+ 
+<body>
+
+<div class="fondo" id="page" data-role="page" data-theme="e">
+<div data-role="header" class="ui-bar-e">
+		Animales
+	</div>
+    
+<div class="fondo" data-role="content" data-theme="e">
+    	<div class="men">
+			<ul data-role="listview" class="letra">
+				<li><a href="#page2" data-transition="slideup"><center>Animales Domesticos</center></a></li>
+            	<li><a href="#page3" data-transition="slideup"><center>Animales Salvajes</center></a></li>
+			</ul>
+        </div>
+	</div>
+    
+	<div data-role="footer" class="ui-bar-e" >
+		Página Principal
+         <a href="javascript:window.close();" style="float:right; border:#9E4A0C dashed 10px;">Cerrar</a>
+</div>
+</div>
+<!-- Sonidos de animales Domesticos ----------------------------------------------->
+
+<audio id="vaca"><source src="Sonidos/Animales Domesticos/vaca.mp3"></source></audio>
+<audio id="cerdo"><source src="Sonidos/Animales Domesticos/cerdo.mp3"></source></audio>
+<audio id="gato"><source src="Sonidos/Animales Domesticos/gato.mp3"></source></audio>
+<audio id="pato"><source src="Sonidos/Animales Domesticos/pato.mp3"></source></audio>
+<audio id="perro"><source src="Sonidos/Animales Domesticos/perro.mp3"></source></audio>
+<audio id="pollo"><source src="Sonidos/Animales Domesticos/pollo.mp3"></source></audio>
+
+<!-- Sonidos de animales Salvajes -------------------------------------------------->
+
+<audio id="elefante"><source src="Sonidos/Animales Salvajes/elefante.mp3"></source></audio>
+<audio id="panda"><source src="Sonidos/Animales Salvajes/panda.mp3"></source></audio>
+<audio id="rana"><source src="Sonidos/Animales Salvajes/rana.mp3"></source></audio>
+<audio id="leon"><source src="Sonidos/Animales Salvajes/leon.mp3"></source></audio>
+<audio id="foca"><source src="Sonidos/Animales Salvajes/foca.mp3"></source></audio>
+<audio id="mono"><source src="Sonidos/Animales Salvajes/mono.mp3"></source></audio>
+
+<!-- Animales Domesticos ---------------------------------->
+<div class="fondo" data-role="page" id="page2" data-theme="a">
+	<div data-role="header" class="ui-bar-e">
+		Animales Domesticos
+	</div>
+	<div class="fondo" data-role="content">	
+    	<div class="men">
+			<div><img src="Animales/Animales Domesticos/vaca.jpg" class="imagenes" data-role="button" onClick="vaca.play()" value="play"></div>
+            <div><img src="Animales/Animales Domesticos/gato.jpg" class="imagenes" data-role="button" onClick="gato.play()" value="play"></div>
+            <div><img src="Animales/Animales Domesticos/pato.jpg" class="imagenes" data-role="button" onClick="pato.play()" value="play"></div>
+            <div><img src="Animales/Animales Domesticos/cerdito.jpg" class="imagenes" data-role="button" onClick="cerdo.play()" value="play"></div>
+            <div><img src="Animales/Animales Domesticos/perro.jpg" class="imagenes" data-role="button" onClick="perro.play()" value="play"></div>
+            <div><img src="Animales/Animales Domesticos/pollo.jpg" class="imagenes" data-role="button" onClick="pollo.play()" value="play"></div>
+        </div>	
+	</div>
+	<div data-role="footer" class="ui-bar-e">
+		<div style="float:left;"><a href="#page" style="float:right; border:#9E4A0C dashed 11px" data-role="button" data-transition="slidedown">Men&uacute; Principal</a></div>
+         <a href="javascript:window.close();" style="float:right; border:#9E4A0C dashed 10px">Cerrar</a>
+	</div>
+</div>
+
+<!--Animales Salvajes -------------------------------------->
+<div class="fondo" data-role="page" id="page3" data-theme="a">
+	<div data-role="header" class="ui-bar-e">
+		Animales Salvajes
+	</div>
+	<div class="fondo" data-role="content">	
+    	<div class="men">
+			<div><img src="Animales/Animales Salvajes/elefante.jpg" class="imagenes" data-role="button" onClick="elefante.play()" value="play"></div>
+        	<div><img src="Animales/Animales Salvajes/leon.jpg" class="imagenes" data-role="button" onClick="leon.play()" value="play"></div>
+        	<div><img src="Animales/Animales Salvajes/mono.jpg" class="imagenes" data-role="button" onClick="mono.play()" value="play"></div>
+        	<div><img src="Animales/Animales Salvajes/panda.jpg" class="imagenes" data-role="button" onClick="panda.play()" value="play"></div>
+        	<div><img src="Animales/Animales Salvajes/foca.jpg" class="imagenes" data-role="button" onClick="foca.play()" value="play"></div>
+        	<div><img src="Animales/Animales Salvajes/rana.jpg" class="imagenes" data-role="button" onClick="rana.play()" value="play"></div>
+        </div>
+	</div>
+  <div data-role="footer" class="ui-bar-e">
+	<div style="float:left;"><a href="#page" style="float:right; border:#9E4A0C dashed 11px" data-role="button" data-transition="slidedown">Men&uacute; Principal</a></div>
+      <a href="javascript:window.close();" style="float:right; border:#9E4A0C dashed 10px">Cerrar</a>
+	</div>
+</div>
+
+<audio src="Sonidos/Animales Domesticos/Gato.m4a" preload="auto">
+
+</body>
+</html>
